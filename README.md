@@ -1,17 +1,1 @@
-# watch-ctalalogue.app
-⌚ Watch Products Catalog Application
-       📌 Project Description :
-   This project is a simple web application that allows users to manage a catalog of watch products.
-   The application provides an easy way to add new products and view all existing products in a clean and modern interface.
-        🚀 Features
-             ➕ Add a new watch product using a form
-             📋 View all products in a card-based layout
-             🖼️ Display product image, name, description, and price
-             ✅ Front-end form validation
-             ⚠️ Back-end error handling with clear messages
-       🛠️ Technologies Used
-              Front-End : React.js  HTML / CSS  JavaScript
-              Back-End : Python  Flask
-              Database : MySQL
-
-
+Watch Products Catalog Application — This project is a simple web application designed to help users manage a catalog of watch products through a clean and modern interface. It allows users to easily add new products using a form and view all existing products displayed in a card-based layout, where each card includes the product’s image, name, description, and price. The application ensures a smooth user experience by implementing front-end validation to check that all form inputs are correctly filled before submission, along with back-end error handling that provides clear and helpful messages in case something goes wrong. The front-end is built using React.js with HTML, CSS, and JavaScript to create a dynamic and responsive interface, while the back-end is powered by Python with Flask to handle server requests. Product data is stored efficiently using a MySQL database.
