@@ -18,12 +18,12 @@ def add_product():
         image_url = data.get('image_url', '')
 
         if not name or not price:
-            return jsonify({"error": "يجب ملء الاسم والسعر"}), 400
+            return jsonify({"error": "fill the name and the price field"}), 400
 
         try:
             price = float(price)
         except ValueError:
-            return jsonify({"error": "السعر يجب أن يكون رقم"}), 400
+            return jsonify({"error": "the price must be a number"}), 400
 
         # DB connection
         conn = get_db_connection()
