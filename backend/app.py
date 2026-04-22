@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # ➕ Add product
-@app.route('/products', methods=['POST'])
+@app.route('/api/products', methods=['POST'])
 def add_product():
     try:
         data = request.json
@@ -15,7 +15,7 @@ def add_product():
         name = data.get('name')
         price = data.get('price')
         description = data.get('description', '')
-        image_url = data.get('image_url', '')
+        image = data.get('image', '')
 
         if not name or not price:
             return jsonify({"error": "fill the name and the price field"}), 400
@@ -48,7 +48,7 @@ def add_product():
 
 
 # 📋 Get + 🔍 Search products
-@app.route('/products', methods=['GET'])
+@app.route('/api/products', methods=['GET'])
 def get_products():
     try:
         search = request.args.get('search')
