@@ -30,10 +30,10 @@ def add_product():
         cursor = conn.cursor()
 
         query = """
-        INSERT INTO products (name, description, price, image_url)
+        INSERT INTO products (name, description, price, image)
         VALUES (%s, %s, %s, %s)
         """
-        values = (name, description, price, image_url)
+        values = (name, description, price, image)
 
         cursor.execute(query, values)
         conn.commit()
@@ -55,16 +55,7 @@ def get_products():
 
         conn = get_db_connection()
         cursor = conn.cursor(dictionary=True)
-
-        if search:
-            query = """
-            SELECT * FROM products 
-            WHERE name LIKE %s OR description LIKE %s
-            """
-            values = (f"%{search}%", f"%{search}%")
-            cursor.execute(query, values)
-        else:
-            cursor.execute("SELECT * FROM products")
+        cursor.execute("SELECT * FROM products")
 
         products = cursor.fetchall()
 
