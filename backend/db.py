@@ -4,6 +4,6 @@ def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        password="2022",
+        password="2720034",
         database="watch_catalog"
     )
